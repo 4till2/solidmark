@@ -159,7 +159,7 @@ class Header extends PureComponent {
                   loggedIn && home && 'booky--hide-mobile-tablet'
                 )}
               >
-                <Logo color="light" height={120} width={120} />
+                <Logo color="light" height={"120px"} width={"120px"} />
               </Link>
               <Menu loggedIn={loggedIn} className="booky--hide-mobile-tablet" />
               {loggedIn && (
