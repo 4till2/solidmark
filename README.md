@@ -1,3 +1,7 @@
+#communication
+![homepage](_source/_assets/screenshotHome.png)
+**Video Introduction**
+https://youtu.be/n7DjZRtXgBU
 ## What is Solidmark?
 Solidmark is a fork of the [booky.io](#what-is-bookyio) front end, with the [Solid Protocol](#what-is-solid) implemented in place of the backend database.
 The primary objective of this project is to show how one might implement Solid into an existing codebase to increase data ownership. One of the more exciting consequences
@@ -81,6 +85,8 @@ import {FOAF, RDF, SCHEMA_INRUPT} from '@inrupt/vocab-common-rdf';
 ```
 The original React app has many dependencies, and features (ie. extensions) which we are not using for the time being, but for the sake of this project
 I have left all previous code intact (except as mentioned).
+
+After installing the dependencies you can run a local environment with `npm start`.
 
 #### Summary
 In total, I spent about 20 hours on this project. The estimated time breakdown is as follows.
