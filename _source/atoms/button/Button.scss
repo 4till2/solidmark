@@ -1,0 +1,53 @@
+@import "../../templates/booky/config";
+
+.button {
+  align-items: center;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: $font-family--text;
+  font-size: 1rem;
+  overflow: hidden;
+  padding: 0 1.2rem;
+  position: relative;
+  transition: color 0.2s linear, background-color 0.2s linear;
+  user-select: none;
+  white-space: nowrap;
+  justify-content: center;
+  text-decoration: none;
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+.button--content-before {
+  margin-top: 2rem;
+}
+
+@import "./ButtonSmall";
+@import "./ButtonLarge";
+
+.button__text {
+  display: inline-block;
+  font-size: 1rem;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  height: 2rem;
+  line-height: 2;
+  width: 100%;
+  text-align: center;
+}
+
+.button__icon {
+  pointer-events: none;
+}
+
+/* stylelint-disable declaration-no-important */
+.button--skeleton {
+  position: relative;
+  height: 2rem;
+  width: 12rem !important;
+}
+/* stylelint-enable */

@@ -1,0 +1,209 @@
+.button--large {
+  justify-content: center;
+
+  @include mobile-tablet() {
+    height: 40px;
+    width: 100%;
+
+    &.button--pending {
+      .button__icon {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .button__text {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+    }
+
+    .button__icon {
+      display: inline-block;
+      left: calc(50% - 18px);
+      position: absolute;
+      transform: translateY(-10px);
+      opacity: 0;
+      transition: color 0.2s linear, transform 0.3s ease, opacity 0.2s ease;
+    }
+  }
+
+  @include tablet() {
+    height: 50px;
+    width: 200px;
+  }
+
+  @include desktop() {
+    height: 60px;
+    width: 200px;
+
+    &:hover,
+    &:focus,
+    &.button--pending {
+      .icon,
+      .icon__svg {
+        color: $color-font--dark;
+      }
+
+      .button__icon {
+        transform: translateX(10px);
+      }
+
+      .button__text {
+        transform: translateX(20px);
+      }
+    }
+
+    .button__icon {
+      display: inline-block;
+      left: 0;
+      top: calc(50% - 18px);
+      position: absolute;
+      transform: translateX(-100%);
+      transition: color 0.2s linear, transform 0.2s ease;
+
+      &:hover,
+      &:focus {
+        /* stylelint-disable max-nesting-depth */
+        .icon__svg {
+          transform: none;
+        }
+        /* stylelint-enable */
+      }
+    }
+  }
+}
+
+.button--large-primary {
+  background-color: $color-background--primary;
+  color: $color-font--white;
+  border-bottom: 2px solid darken($color--primary, 10%);
+
+  @include mobile-tablet() {
+    &:active,
+    &:focus {
+      background-color: lighten($color-background--primary, 5%);
+      color: $color-font--white;
+    }
+  }
+
+  @include desktop() {
+    &:hover,
+    &:focus,
+    &.button--pending {
+      background-color: lighten($color-background--primary, 5%);
+      color: $color-font--white;
+
+      .icon,
+      .icon__svg {
+        color: $color-font--white;
+      }
+    }
+  }
+}
+
+.button--large-green {
+  background-color: $color--green;
+  color: $color-font--white;
+  border-bottom: 2px solid darken($color--green, 10%);
+
+  @include mobile-tablet() {
+    &:active,
+    &:focus {
+      background-color: lighten($color--green, 5%);
+      color: $color-font--white;
+    }
+  }
+
+  @include desktop() {
+    &:hover,
+    &:focus,
+    &.button--pending {
+      background-color: lighten($color--green, 5%);
+      color: $color-font--white;
+
+      .icon,
+      .icon__svg {
+        color: $color-font--white;
+      }
+    }
+  }
+}
+
+.button--large-blue {
+  background-color: $color--blue;
+  color: $color-font--white;
+  border-bottom: 2px solid darken($color--blue, 10%);
+
+  @include mobile-tablet() {
+    &:active,
+    &:focus {
+      background-color: lighten($color--blue, 5%);
+      color: $color-font--white;
+    }
+  }
+
+  @include desktop() {
+    &:hover,
+    &:focus,
+    &.button--pending {
+      background-color: lighten($color--blue, 5%);
+      color: $color-font--white;
+
+      .icon,
+      .icon__svg {
+        color: $color-font--white;
+      }
+    }
+  }
+}
+
+.button--large-dark {
+  background-color: $color-background--dark;
+  color: $color-font--white;
+  border-bottom: 2px solid darken($color-background--dark, 10%);
+
+  @include mobile-tablet() {
+    &:active,
+    &:focus {
+      background-color: lighten($color-background--dark, 5%);
+      color: $color-font--white;
+    }
+  }
+
+  @include desktop() {
+    &:hover,
+    &:focus,
+    &.button--pending {
+      background-color: lighten($color-background--dark, 5%);
+      color: $color-font--white;
+
+      .icon,
+      .icon__svg {
+        color: $color-font--white;
+      }
+    }
+  }
+}
+
+.button--large-light {
+  background-color: $color-background--light;
+  color: $color-font--dark;
+  border-bottom: 2px solid darken($color-background--light, 15%);
+
+  @include mobile-tablet() {
+    &:active,
+    &:focus {
+      background-color: darken($color-background--light, 5%);
+      color: $color-font--dark;
+    }
+  }
+
+  @include desktop() {
+    &:hover,
+    &:focus,
+    &.button--pending {
+      background-color: darken($color-background--light, 5%);
+      color: $color-font--dark;
+    }
+  }
+}

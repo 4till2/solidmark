@@ -1,0 +1,19 @@
+.paragraph {
+  color: $color-font--dark;
+  font-family: $font-family--text;
+  line-height: 1.5;
+  padding-bottom: 1rem;
+  word-wrap: break-word;
+}
+
+.paragraph--first {
+  margin-top: 1rem;
+}
+
+.paragraph--dark-mode {
+  color: $color-font--white;
+}
+
+.paragraph--no-padding {
+  padding: 0;
+}

@@ -1,0 +1,46 @@
+* {
+  -webkit-tap-highlight-color: transparent;
+  border-color: transparent;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+input,
+select,
+textarea,
+button,
+a,
+*:focus {
+  outline: 1px solid transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button::-moz-focus-inner {
+  border-color: transparent;
+}
+
+b,
+strong {
+  font-weight: 700; /* Was still 400 in Firefox */
+}
+
+main,
+header,
+footer,
+section,
+nav,
+aside,
+details,
+summary,
+article,
+time {
+  display: block;
+}

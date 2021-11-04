@@ -1,0 +1,32 @@
+.login--extension {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.login__forgot {
+  display: block;
+  margin-top: 1rem;
+}
+
+.login__join {
+  margin-top: 0.5rem;
+}
+
+.login__spinner {
+  margin-top: calc(3rem + 6px);
+  left: calc(50% - 18px);
+}
+
+.login__button {
+  &:hover,
+  &:focus,
+  &.button--pending {
+    background-color: lighten($color--blue, 5%);
+    color: $color-font--white;
+
+    .icon,
+    .icon__svg {
+      color: $color-font--white;
+    }
+  }
+}

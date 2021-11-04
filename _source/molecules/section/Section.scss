@@ -1,0 +1,74 @@
+.section {
+  position: relative;
+  margin-bottom: 3rem;
+
+  @include tablet {
+    margin-bottom: 4rem;
+  }
+
+  @include desktop {
+    margin-bottom: 6rem;
+  }
+}
+
+.section--noMargin {
+  margin-bottom: 0;
+}
+
+.section--full-width .section__content {
+  margin: 0;
+  max-width: none;
+}
+
+.section--compact .section__content {
+  width: 500px;
+  max-width: 100%;
+
+  @include tablet-desktop {
+    padding: 0 22px;
+  }
+}
+
+.section--primary,
+.section--blue,
+.section--green {
+  .headline,
+  .paragraph {
+    color: $color-font--white;
+  }
+}
+
+.section--primary {
+  background-color: $color--primary;
+}
+
+.section--light {
+  background-color: $color-background--light;
+}
+
+.section--blue {
+  background-color: $color--blue;
+}
+
+.section--green {
+  background-color: $color--green;
+}
+
+.section--dark {
+  background-color: $color--dark;
+}
+
+.section__content {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 calc(3% + 6px);
+  position: relative;
+
+  @include desktop {
+    padding: 0 36px;
+  }
+}
+
+.section__content--noPadding {
+  padding: 0;
+}

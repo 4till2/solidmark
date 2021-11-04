@@ -1,0 +1,133 @@
+.link {
+  font-size: 1rem;
+  position: relative;
+  text-decoration: underline;
+  transition: color 0.2s linear;
+  display: inline-flex;
+  cursor: pointer;
+  text-decoration-skip-ink: auto;
+  word-break: break-word;
+}
+
+.link--noUnderline {
+  text-decoration: none;
+}
+
+.link--badge {
+  &::before {
+    content: "";
+    position: absolute;
+    height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    background-color: $color-font--white;
+    right: -8px;
+    top: 4px;
+    animation: 2.5s ease infinite badge;
+    transition: background-color 0.2s linear;
+  }
+}
+
+@keyframes badge {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  30% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  5% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  70% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.link--primary {
+  color: $color-font--primary;
+
+  &:active,
+  &:focus {
+    color: $color-font--medium;
+  }
+
+  &.link--dark-mode {
+    &:active,
+    &:focus {
+      color: $color-font--light;
+    }
+  }
+
+  @include desktop {
+    &:hover {
+      color: $color-font--medium;
+    }
+
+    &.link--dark-mode {
+      &:hover {
+        color: $color-font--light;
+      }
+    }
+  }
+}
+
+.link--medium {
+  color: $color-font--medium;
+
+  &:active,
+  &:focus {
+    color: $color-font--dark;
+  }
+
+  @include desktop {
+    &:hover {
+      color: $color-font--dark;
+    }
+  }
+}
+
+.link--dark {
+  color: $color-font--dark;
+
+  &:active,
+  &:focus {
+    color: $color-font--medium;
+  }
+
+  &.link--dark-mode {
+    color: $color-font--light;
+  }
+
+  @include desktop {
+    &:hover {
+      color: $color-font--medium;
+    }
+  }
+}
+
+.link--light {
+  color: $color-font--white;
+
+  &:active,
+  &:focus {
+    color: $color-font--primary;
+  }
+
+  @include desktop {
+    &:hover {
+      color: $color-font--primary;
+    }
+  }
+}

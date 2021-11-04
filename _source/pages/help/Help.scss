@@ -1,0 +1,67 @@
+@import "../../templates/booky/config.scss";
+
+.help-headline,
+.help-intro {
+  @include tablet {
+    width: 60%;
+  }
+
+  @include desktop {
+    width: calc(100% - 30vw - 36px);
+  }
+
+  @include hd {
+    width: 70%;
+  }
+}
+
+.help-illustration {
+  position: absolute;
+  top: -2rem;
+  width: 28vw;
+  height: 28vw;
+  right: 3%;
+
+  @include tablet-desktop {
+    max-width: 300px;
+    max-height: 300px;
+    right: 36px;
+  }
+
+  @include desktop {
+    top: -4rem;
+  }
+}
+
+.help-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 1rem;
+}
+
+.help-container__item {
+  width: 100%;
+
+  @include tablet-desktop() {
+    width: 50%;
+    padding: 0 3% 0 0;
+  }
+}
+
+.help-container__item:nth-child(2n) {
+  @include tablet-desktop() {
+    padding: 0 0 0 3%;
+  }
+}
+
+.help__button {
+  pointer-events: none;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.help__icon {
+  display: flex;
+  align-items: center;
+}

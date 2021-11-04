@@ -1,0 +1,70 @@
+.menu {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-start;
+  margin-right: 0.5rem;
+}
+
+.menu__item {
+  display: flex;
+  align-items: center;
+  margin-right: 0.5rem;
+  position: relative;
+  white-space: nowrap;
+
+  &::after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    left: 36px;
+    right: 0;
+    bottom: 2px;
+    background-color: transparent;
+    transition: background-color 0.2s linear;
+  }
+
+  &::before {
+    background-color: $color-font--white;
+  }
+
+  &:active,
+  &:focus {
+    color: $color-font--dark;
+
+    &::before {
+      background-color: $color-font--dark;
+    }
+
+    .icon {
+      color: $color-font--dark;
+    }
+  }
+
+  @include desktop {
+    &:hover {
+      color: $color-font--dark;
+
+      &::before {
+        background-color: $color-font--dark;
+      }
+
+      .icon {
+        color: $color-font--dark;
+      }
+    }
+  }
+}
+
+.menu__item--active {
+  &::after {
+    background-color: $color-font--white;
+  }
+
+  &:active,
+  &:focus,
+  &:hover {
+    &::after {
+      background-color: $color-font--dark;
+    }
+  }
+}

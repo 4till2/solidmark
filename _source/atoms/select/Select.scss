@@ -1,0 +1,42 @@
+.select {
+  font-family: $font-family--text;
+  font-size: 16px;
+  color: $color-font--dark;
+  border-radius: 0;
+  background-color: $color-background--light;
+  border: 1px solid rgba($color--black, 0.15);
+  border-bottom: 2px solid $color-font--medium;
+  height: 3rem;
+  line-height: 3;
+  padding: 0 9px;
+  transition: background-color 0.3s, border-color 0.3s linear;
+  width: 100%;
+
+  &:active,
+  &:focus {
+    border-bottom-color: $color--blue;
+    background-color: $color-font--white;
+  }
+
+  @include desktop {
+    &:hover {
+      background-color: $color-font--white;
+      border-bottom-color: $color--blue;
+    }
+  }
+}
+
+.select--dark-mode {
+  background-color: $color--dark;
+  color: $color-font--white;
+
+  &:focus {
+    background-color: $color--dark;
+  }
+
+  @include desktop {
+    &:hover {
+      background-color: $color--dark;
+    }
+  }
+}

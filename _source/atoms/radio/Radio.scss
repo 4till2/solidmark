@@ -1,0 +1,41 @@
+.radio {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  padding-bottom: 0.5rem;
+  white-space: nowrap;
+}
+
+.radio--first {
+  margin-top: 0;
+}
+
+.radio--image {
+  display: block;
+}
+
+.radio__input {
+  &:focus {
+    outline: 2px dashed $color--primary;
+  }
+}
+
+.radio__label {
+  user-select: none;
+  margin: 0;
+  padding: 0 0 0 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  white-space: normal;
+  margin-right: 1rem;
+}
+
+.radio__image-label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.radio__image {
+  width: 100%;
+  max-width: 200px;
+}

@@ -1,0 +1,274 @@
+.button--small {
+  .icon {
+    height: 2rem;
+    width: 24px;
+    margin-right: 6px;
+  }
+
+  .icon__svg {
+    padding: 0;
+    height: 24px;
+    width: 24px;
+  }
+}
+
+.button--small-light {
+  background-color: transparent;
+  border-color: $color-font--white;
+  color: $color-font--white;
+
+  @include mobile-tablet() {
+    &:active,
+    &:focus {
+      background-color: $color-font--white;
+      color: $color-font--primary;
+    }
+
+    &:active .icon,
+    &:focus .icon {
+      color: $color-font--primary;
+    }
+  }
+
+  @include desktop() {
+    &:hover,
+    &:focus {
+      background-color: $color-font--white;
+      color: $color-font--primary;
+    }
+
+    &:hover .icon,
+    &:focus .icon {
+      color: $color-font--primary;
+    }
+  }
+
+  &.button--solid {
+    background-color: $color-font--white;
+    border-bottom-color: darken($color-font--white, 10%);
+    color: $color-font--primary;
+    border-bottom-width: 2px;
+
+    .icon {
+      color: $color-font--primary;
+    }
+
+    @include mobile-tablet() {
+      &:active,
+      &:focus {
+        color: $color-font--dark;
+      }
+
+      &:active .icon,
+      &:focus .icon {
+        color: $color-font--dark;
+      }
+    }
+
+    @include desktop() {
+      &:hover,
+      &:focus {
+        color: $color-font--dark;
+      }
+
+      &:hover .icon,
+      &:focus .icon {
+        color: $color-font--dark;
+      }
+    }
+  }
+}
+
+.button--small-primary {
+  background-color: transparent;
+  border-color: $color-font--primary;
+  color: $color-font--primary;
+
+  @include mobile-tablet() {
+    &:active,
+    &:focus {
+      background-color: $color-font--primary;
+      color: $color-font--white;
+    }
+
+    &:active .icon,
+    &:focus .icon {
+      color: $color-font--white;
+    }
+  }
+
+  @include desktop() {
+    &:hover,
+    &:focus {
+      background-color: $color-font--primary;
+      color: $color-font--white;
+    }
+
+    &:hover .icon,
+    &:focus .icon {
+      color: $color-font--white;
+    }
+  }
+
+  &.button--solid {
+    background-color: $color-background--primary;
+    border-bottom-color: darken($color-background--primary, 10%);
+    color: $color-font--white;
+
+    .icon {
+      color: $color-font--white;
+    }
+
+    @include mobile-tablet() {
+      &:active,
+      &:focus {
+        color: $color-font--dark;
+      }
+
+      &:active .icon,
+      &:focus .icon {
+        color: $color-font--dark;
+      }
+    }
+
+    @include desktop() {
+      &:hover,
+      &:focus {
+        color: $color-font--dark;
+      }
+
+      &:hover .icon,
+      &:focus .icon {
+        color: $color-font--dark;
+      }
+    }
+  }
+}
+
+.button--small-dark {
+  background-color: transparent;
+  border-color: $color-font--dark;
+  color: $color-font--dark;
+
+  @include mobile-tablet() {
+    &:active,
+    &:focus {
+      background-color: $color-font--dark;
+      color: $color-font--white;
+    }
+
+    &:active .icon,
+    &:focus .icon {
+      color: $color-font--white;
+    }
+  }
+
+  @include desktop() {
+    &:hover,
+    &:focus {
+      background-color: $color-font--dark;
+      color: $color-font--white;
+    }
+
+    &:hover .icon,
+    &:focus .icon {
+      color: $color-font--white;
+    }
+  }
+}
+
+.button--small-medium {
+  background-color: transparent;
+  border-color: $color-font--medium;
+  color: $color-font--medium;
+
+  @include mobile-tablet() {
+    &:active,
+    &:focus {
+      background-color: $color-font--medium;
+      color: $color-font--white;
+    }
+
+    &:active .icon,
+    &:focus .icon {
+      color: $color-font--white;
+    }
+  }
+
+  @include desktop() {
+    &:hover,
+    &:focus {
+      background-color: $color-font--medium;
+      color: $color-font--white;
+    }
+
+    &:hover .icon,
+    &:focus .icon {
+      color: $color-font--white;
+    }
+  }
+}
+
+.button--small-green {
+  background-color: transparent;
+  border-color: $color--green;
+  color: $color--green;
+
+  @include mobile-tablet() {
+    &:active,
+    &:focus {
+      background-color: $color--green;
+      color: $color-font--white;
+    }
+
+    &:active .icon,
+    &:focus .icon {
+      color: $color-font--white;
+    }
+  }
+
+  @include desktop() {
+    &:hover,
+    &:focus {
+      background-color: $color--green;
+      color: $color-font--white;
+    }
+
+    &:hover .icon,
+    &:focus .icon {
+      color: $color-font--white;
+    }
+  }
+}
+
+.button--small-blue {
+  background-color: transparent;
+  border-color: $color--blue;
+  color: $color--blue;
+
+  @include mobile-tablet() {
+    &:active,
+    &:focus {
+      background-color: $color--blue;
+      color: $color-font--white;
+    }
+
+    &:active .icon,
+    &:focus .icon {
+      color: $color-font--white;
+    }
+  }
+
+  @include desktop() {
+    &:hover,
+    &:focus {
+      background-color: $color--blue;
+      color: $color-font--white;
+    }
+
+    &:hover .icon,
+    &:focus .icon {
+      color: $color-font--white;
+    }
+  }
+}

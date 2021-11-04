@@ -1,0 +1,15 @@
+.label {
+  display: block;
+  margin-top: 1rem;
+  padding-bottom: 0.5rem;
+  line-height: 1.5;
+  color: $color-font--dark;
+}
+
+.label--first {
+  margin-top: 0;
+}
+
+.label--dark-mode {
+  color: $color-font--white;
+}

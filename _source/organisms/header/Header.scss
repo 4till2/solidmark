@@ -1,0 +1,167 @@
+.header {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  position: relative;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+
+  @include mobile-tablet {
+    &::after {
+      background-color: rgba(0, 0, 0, 0.3);
+      bottom: 0;
+      content: "";
+      left: 0;
+      opacity: 0;
+      position: fixed;
+      width: 0;
+      top: 0;
+      transition: opacity 0.3s linear, width 0s 0.3s linear;
+    }
+  }
+}
+
+.header--overlay {
+  @include mobile-tablet {
+    &::after {
+      opacity: 1;
+      transition: opacity 0.3s linear;
+      width: 100vw;
+      z-index: 4;
+    }
+  }
+}
+
+.header--sticky {
+  position: fixed;
+}
+
+.header--color0 {
+  background-color: $color--0;
+}
+
+.header--color1 {
+  background-color: $color--1;
+}
+
+.header--color2 {
+  background-color: $color--2;
+}
+
+.header--color3 {
+  background-color: $color--3;
+}
+
+.header--color4 {
+  background-color: $color--4;
+}
+
+.header--color5 {
+  background-color: $color--5;
+}
+
+.header--color6 {
+  background-color: $color--6;
+}
+
+.header--color7 {
+  background-color: $color--7;
+}
+
+.header--color8 {
+  background-color: $color--8;
+}
+
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 calc(3% + 6px);
+  height: 3rem;
+  width: 100%;
+  max-width: 1200px;
+
+  @include tablet {
+    height: 4.4rem;
+  }
+
+  @include desktop {
+    height: 5.5rem;
+    margin: 0 auto;
+    padding: 0 36px;
+  }
+}
+
+.header__wrapper--full-width {
+  max-width: none;
+}
+
+.header__skip-link {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute;
+  white-space: nowrap;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.header__skip-link:focus {
+  clip: auto;
+  height: auto;
+  overflow: auto;
+  width: auto;
+  background-color: $color-background--light;
+  top: 0;
+  left: 50%;
+  padding: 0.5rem;
+  transform: translateX(-50%);
+  transition: none;
+  border-radius: 0 0 3px 3px;
+  max-width: 14rem;
+  white-space: normal;
+  text-align: center;
+  z-index: 1;
+
+  @include tablet-desktop {
+    padding: 1rem;
+  }
+}
+
+.header__logo {
+  margin-right: 1.5rem;
+
+  @include mobile-tablet {
+    flex-grow: 1;
+  }
+
+  &:focus {
+    outline: 1px dashed $color-font--white;
+  }
+}
+
+.header__login {
+  @include desktop {
+    margin-right: 1rem;
+  }
+}
+
+.header__add {
+  margin-left: calc(1rem - 6px);
+}
+
+.header__add-icon {
+  margin-left: -6px;
+
+  &.icon--skeleton {
+    min-width: 24px;
+  }
+}
+
+.header__menu {
+  flex-shrink: 0;
+  margin-left: calc(1rem - 6px);
+}
+
+.header__mobile-wrapper {
+  display: flex;
+  align-items: center;
+}

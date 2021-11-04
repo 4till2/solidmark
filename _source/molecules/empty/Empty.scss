@@ -1,0 +1,30 @@
+.empty__text {
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+.empty {
+  display: flex;
+  margin: 1rem auto;
+  list-style: none;
+  flex-direction: column;
+  align-items: center;
+  max-width: 350px;
+  text-align: center;
+  color: $color-font--dark;
+
+  @include mobile {
+    padding: 0 calc(3% + 6px);
+  }
+}
+
+.empty--dark-mode {
+  color: $color-font--white;
+}
+
+.empty__image {
+  margin: 2rem 0 0;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
+}
