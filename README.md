@@ -5,7 +5,7 @@ Solidmark is a fork of the [booky.io](#what-is-bookyio) front end, with the [Sol
 The primary objective of this project is to show how one might implement Solid into an existing codebase to increase data ownership. One of the more exciting consequences
 of this is the removal of managing a backend server and api service. All storage, retrieval, and management of the users' data
 is handled with the front end code. There is no fear of data corruption since the user only has access to their Solid data Pod
-as a rule. See [development](#development) below for an outline of the Solid specific implementation.
+as a rule. See [Implementation](#implementation) below for an outline of the Solid specific implementation.
 
 ## What is Solid?
 Solid is a specification that lets people store their data securely in decentralized data stores called Pods. Pods are like secure personal web servers for data. When data is stored in someone's Pod, they control which people and applications can access it.Solid is a specification that lets people store their data securely in decentralized data stores called Pods. Pods are like secure personal web servers for data. When data is stored in someone's Pod, they control which people and applications can access it.
@@ -19,7 +19,7 @@ The original React / Redux code can be found [here](https://github.com/nthiebes/
 
 [Learn more about booky.io](https://booky.io/about)
 
-## Development
+## Implementation
 The only place within the previously existing codebase where a reference to Solid can be found is within the [fetcher function](_source/_utils/fetcher/index.js) where we
 intercept the regular `fetch` method for our own. To demonstrate that Solid can be used alongside a standard api I have actually just configured Solid alongside the normal api usage, activating it when our constant `SOLID` is set to true. [Code permalink](https://github.com/yserkez/solidmark/blob/1d44d1efcfb6da0742661d5a56f2f16486b39f98/_source/_utils/fetcher/index.js#L70)
 ```javascript
