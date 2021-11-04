@@ -1,3 +1,5 @@
+#communication
+
 ## What is Solidmark?
 Solidmark is a fork of the [booky.io](#what-is-bookyio) front end, with the [Solid Protocol](#what-is-solid) implemented in place of the backend database.
 The primary objective of this project is to show how one might implement Solid into an existing codebase to increase data ownership. One of the more exciting consequences
