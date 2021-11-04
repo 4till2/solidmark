@@ -84,6 +84,8 @@ import {FOAF, RDF, SCHEMA_INRUPT} from '@inrupt/vocab-common-rdf';
 The original React app has many dependencies, and features (ie. extensions) which we are not using for the time being, but for the sake of this project
 I have left all previous code intact (except as mentioned).
 
+After installing the dependencies you can run a local environment with `npm start`.
+
 #### Summary
 In total, I spent about 20 hours on this project. The estimated time breakdown is as follows.
 - 40% working through Solid documentation including protocol, vocabulary and implementation specifics 
