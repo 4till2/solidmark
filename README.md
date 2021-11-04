@@ -19,7 +19,7 @@ The original React / Redux code can be found [here](https://github.com/nthiebes/
 
 ## Development
 The only place within the previously existing codebase where a reference to Solid can be found is within the [fetcher function](_source/_utils/fetcher/index.js) where we
-intercept the regular `fetch` method for our own. To demonstrate that Solid can be used alongside a standard api I have actually just configured Solid alongside the normal api usage, activating it when our constant `SOLID` is set to true.
+intercept the regular `fetch` method for our own. To demonstrate that Solid can be used alongside a standard api I have actually just configured Solid alongside the normal api usage, activating it when our constant `SOLID` is set to true. [Code permalink](https://github.com/yserkez/solidmark/blob/1d44d1efcfb6da0742661d5a56f2f16486b39f98/_source/_utils/fetcher/index.js#L70)
 ```javascript
 // BEFORE
 // ... code
@@ -62,7 +62,7 @@ The scope of functionality as of writing is:
 - Create, Edit, Delete Bookmarks.
 
 #### Dependencies
-All Solid Dependencies can be found in `solid/index.js`
+All Solid Dependencies can be found in [solid/index.js](_source/_utils/fetcher/solid/index.js).
 ```javascript
 import {fetch, getDefaultSession, handleIncomingRedirect, login} from '@inrupt/solid-client-authn-browser';
 import {
