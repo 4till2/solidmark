@@ -1,9 +1,14 @@
+const SOLID = true;
 import 'abortcontroller-polyfill/dist/abortcontroller-polyfill-only';
+
+import solidFetcher from './solid';
+import {solidPostResponse} from './solid';
 
 const baseUrl =
   process.env.NODE_ENV === 'development'
     ? `http://${document.location.hostname}:8001/api`
     : '/api';
+
 const defaultOptions = {
   credentials:
     process.env.NODE_ENV === 'development' ? 'include' : 'same-origin'
@@ -19,20 +24,23 @@ const formatResponse = (response) =>
   // error.response = response;
   // throw error;
 
-  ({
-    data: response,
+{
+  let ret = {
+    data: SOLID ? solidPostResponse(response) : response,
     error: response.message || response.error
-  });
+  }
+  return ret
+};
 const checkEmptyResponse = (response) => {
   if (response.statusText === 'No Content' || response.status === 204) {
     return {};
   }
-
   return response.json();
 };
 const abortFetch = () => {
   controller && controller.abort();
 };
+
 const fetcher = ({
   params,
   method = 'GET',
@@ -42,18 +50,16 @@ const fetcher = ({
   options = {}
 }) => {
   controller = new AbortController();
-
   if (method === 'GET') {
-    fetch(`${baseUrl}${url}`, {
+    (SOLID ? solidFetcher(url, method) : fetch(`${baseUrl}${url}`, {
       ...defaultOptions,
       ...options,
       signal: controller.signal
-    })
+    }))
       .then((response) => checkEmptyResponse(response))
       .then(formatResponse)
       .then((response) => {
         const { data, error } = response;
-
         if (error) {
           onError(error);
         } else {
@@ -61,6 +67,7 @@ const fetcher = ({
         }
       })
       .catch((error) => {
+        // console.error('CUSTOM ERROR: in fetcher/index.js line 85: \n', error)
         if (error.name !== 'AbortError') {
           onError(error.statusText || 'error.default');
         }
@@ -73,7 +80,7 @@ const fetcher = ({
     method === 'PUT' ||
     method === 'PATCH'
   ) {
-    fetch(`${baseUrl}${url}`, {
+    (SOLID ? solidFetcher(url, method, params) : fetch(`${baseUrl}${url}`, {
       ...defaultOptions,
       ...options,
       method: method,
@@ -82,7 +89,7 @@ const fetcher = ({
       },
       body: JSON.stringify(params),
       signal: controller.signal
-    })
+    }))
       .then((response) => checkEmptyResponse(response))
       .then(formatResponse)
       .then((response) => {
