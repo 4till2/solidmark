@@ -159,7 +159,7 @@ class Header extends PureComponent {
                   loggedIn && home && 'booky--hide-mobile-tablet'
                 )}
               >
-                <Logo color="light" />
+                <Logo color="light" height={"120px"} width={"120px"} />
               </Link>
               <Menu loggedIn={loggedIn} className="booky--hide-mobile-tablet" />
               {loggedIn && (
@@ -174,25 +174,25 @@ class Header extends PureComponent {
                     pending={logoutPending}
                     isButton
                   />
-                  <Icon
-                    className="booky--hide-desktop"
-                    icon="customize"
-                    color="light"
-                    onClick={this.onCustomizeClick}
-                    label={intl.formatMessage({ id: 'menu.customize' })}
-                    ignoreDarkMode
-                    isButton
-                  />
-                  <ButtonSmallLight
-                    className="header__add booky--hide-mobile-tablet"
-                    onClick={this.onCustomizeClick}
-                    icon="customize"
-                  >
-                    <FormattedMessage
-                      id="menu.customize"
-                      values={{ b: (msg) => <b>{msg}</b> }}
-                    />
-                  </ButtonSmallLight>
+              {/*    <Icon*/}
+              {/*      className="booky--hide-desktop"*/}
+              {/*      icon="customize"*/}
+              {/*      color="light"*/}
+              {/*      onClick={this.onCustomizeClick}*/}
+              {/*      label={intl.formatMessage({ id: 'menu.customize' })}*/}
+              {/*      ignoreDarkMode*/}
+              {/*      isButton*/}
+              {/*    />*/}
+              {/*    <ButtonSmallLight*/}
+              {/*      className="header__add booky--hide-mobile-tablet"*/}
+              {/*      onClick={this.onCustomizeClick}*/}
+              {/*      icon="customize"*/}
+              {/*    >*/}
+              {/*      <FormattedMessage*/}
+              {/*        id="menu.customize"*/}
+              {/*        values={{ b: (msg) => <b>{msg}</b> }}*/}
+              {/*      />*/}
+              {/*    </ButtonSmallLight>*/}
                 </Fragment>
               )}
               {!loggedIn && (
@@ -206,17 +206,17 @@ class Header extends PureComponent {
                       values={{ b: (msg) => <b>{msg}</b> }}
                     />
                   </ButtonSmallLight>
-                  <ButtonSmallLight
-                    className="booky--hide-mobile-tablet"
-                    to="/join"
-                    icon="join"
-                    solid
-                  >
-                    <FormattedMessage
-                      id="header.register"
-                      values={{ b: (msg) => <b>{msg}</b> }}
-                    />
-                  </ButtonSmallLight>
+                  {/*<ButtonSmallLight*/}
+                  {/*  className="booky--hide-mobile-tablet"*/}
+                  {/*  to="/join"*/}
+                  {/*  icon="join"*/}
+                  {/*  solid*/}
+                  {/*>*/}
+                  {/*  <FormattedMessage*/}
+                  {/*    id="header.register"*/}
+                  {/*    values={{ b: (msg) => <b>{msg}</b> }}*/}
+                  {/*  />*/}
+                  {/*</ButtonSmallLight>*/}
                 </Fragment>
               )}
               <span className="header__mobile-wrapper">

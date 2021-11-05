@@ -8,44 +8,44 @@ import Icon from '../../atoms/icon';
 import Link from '../../atoms/link';
 
 const menuItemsLoggedOut = [
-  {
-    name: 'about',
-    route: '/about'
-  },
-  {
-    name: 'help',
-    route: '/help'
-  },
-  {
-    name: 'feedback',
-    route: '/feedback'
-  }
+  // {
+  //   name: 'about',
+  //   route: '/about'
+  // },
+  // {
+  //   name: 'help',
+  //   route: '/help'
+  // },
+  // {
+  //   name: 'feedback',
+  //   route: '/feedback'
+  // }
 ];
 const menuItemsLoggedIn = [
-  {
-    name: 'about',
-    route: '/about'
-  },
-  {
-    name: 'help',
-    route: '/help'
-  },
-  {
-    name: 'account',
-    route: '/account'
-  },
-  {
-    name: 'next',
-    route: '/next'
-  },
-  {
-    name: 'feedback',
-    route: '/feedback'
-  },
-  {
-    name: 'new',
-    route: '/about#new'
-  }
+  // {
+  //   name: 'about',
+  //   route: '/about'
+  // },
+  // {
+  //   name: 'help',
+  //   route: '/help'
+  // },
+  // {
+  //   name: 'account',
+  //   route: '/account'
+  // },
+  // {
+  //   name: 'next',
+  //   route: '/next'
+  // },
+  // {
+  //   name: 'feedback',
+  //   route: '/feedback'
+  // },
+  // {
+  //   name: 'new',
+  //   route: '/about#new'
+  // }
 ];
 
 class Menu extends PureComponent {

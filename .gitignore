@@ -1,4 +1,5 @@
 lib-cov
+.idea
 coverage
 node_modules
 /_public

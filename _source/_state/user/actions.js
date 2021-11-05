@@ -1,3 +1,4 @@
+// TODO: Fetcher handles the api requests.
 import fetcher from '../../_utils/fetcher';
 import { removeEmpty } from '../../_utils/object';
 

@@ -108,13 +108,13 @@ class Home extends Component {
 
     return loggedIn ? (
       <Page toolbar={loggedIn} dashboards home>
-        {hasSidebar && (
-          <DashboardsSidebar
-            className={classNames(blurContent && 'page--blur')}
-          />
-        )}
+        {/*{hasSidebar && (*/}
+        {/*  <DashboardsSidebar*/}
+        {/*    className={classNames(blurContent && 'page--blur')}*/}
+        {/*  />*/}
+        {/*)}*/}
         {keywordExists ? (
-          <Search />
+          <Search/>
         ) : (
           <>
             {showSurveyBanner && (
@@ -141,12 +141,49 @@ class Home extends Component {
                     {surveyMap[language].yesCopy}
                   </ButtonSmallPrimary>
                   <DeclineButton onClick={this.hideSurveyBanner}>
-                    <FormattedMessage id="button.no" />
+                    <FormattedMessage id="button.no"/>
                   </DeclineButton>
                 </span>
               </div>
             )}
-            <Categories className={classNames(blurContent && 'page--blur')} />
+            <Categories className={classNames(blurContent && 'page--blur')}/>
+            <div style={{marginTop:"20px"}}></div>
+            <Section color="" contentClassName="home__bookmarklet">
+              <Illustration
+                className="home__plant booky--hide-mobile"
+                name="plant"
+              />
+              {/*<Illustration*/}
+              {/*  className="home__trees booky--hide-mobile-tablet"*/}
+              {/*  name="trees"*/}
+              {/*/>*/}
+              <H2 style="h1" color="light" noMargin centered>
+                {/*<FormattedMessage id="misc.feature1" />*/}
+                Built with Solid
+              </H2>
+              <H3 style="h2" color="light" noMargin centered>
+                {/*<FormattedMessage id="home.extensionText"/>*/}
+                Solid is a specification that lets people store their data securely in decentralized data stores called Pods.
+              </H3>
+              <nav className="home__extension">
+                <Link
+                  href="https://solidproject.org"
+                  target="_blank"
+                  color="light"
+                  className="home__extension-browser"
+                >
+                  <img
+                    width="75"
+                    height="75"
+                    alt=""
+                    className="home__extension-icon"
+                    src="../../_assets/logos/solid_project.png"
+                    loading="lazy"
+                  />
+                  {'Solid Project'}
+                </Link>
+              </nav>
+            </Section>
           </>
         )}
       </Page>
@@ -155,40 +192,40 @@ class Home extends Component {
         <section className="home__header">
           <div className="home__header-wrapper">
             <Display noMargin centered>
-              <FormattedMessage id="home.display" />
+              <FormattedMessage id="home.display"/>
             </Display>
             <H2 noMargin centered>
-              <FormattedMessage id="home.display2" />
+              <FormattedMessage id="home.display2"/>
             </H2>
-            <ButtonLargeBlue icon="join" to="/join" className="home__join">
+            <ButtonLargeBlue icon="join" to="/login" className="home__join">
               <FormattedMessage
-                id="header.register"
-                values={{ b: (msg) => <b>{msg}</b> }}
+                id="header.login"
+                values={{b: (msg) => <b>{msg}</b>}}
               />
             </ButtonLargeBlue>
-            <ButtonLargeLight icon="about" to="/about">
-              <FormattedMessage
-                id="header.learnMore"
-                values={{ b: (msg) => <b>{msg}</b> }}
-              />
-            </ButtonLargeLight>
+            {/*<ButtonLargeLight icon="about" to="/about">*/}
+            {/*  <FormattedMessage*/}
+            {/*    id="header.learnMore"*/}
+            {/*    values={{ b: (msg) => <b>{msg}</b> }}*/}
+            {/*  />*/}
+            {/*</ButtonLargeLight>*/}
           </div>
-          <Illustration name="devices" className="home__header-illustration" />
+          <Illustration name="devices" className="home__header-illustration"/>
         </section>
         <Section color="light" noPadding contentClassName="home__testimonials">
-          <Testimonials />
+          {/*<Testimonials/>*/}
         </Section>
         <Section>
           <Feature
-            headline={intl.formatMessage({ id: 'home.privateHeadline' })}
-            text={intl.formatMessage({ id: 'home.privateText' })}
+            headline={intl.formatMessage({id: 'home.privateHeadline'})}
+            text={intl.formatMessage({id: 'home.privateText'})}
             illustration="protection"
           />
         </Section>
         <Section>
           <Feature
-            headline={intl.formatMessage({ id: 'home.customizableHeadline' })}
-            text={intl.formatMessage({ id: 'home.customizableText' })}
+            headline={intl.formatMessage({id: 'home.customizableHeadline'})}
+            text={intl.formatMessage({id: 'home.customizableText'})}
             illustration="customize"
             direction="right"
           />
@@ -203,14 +240,16 @@ class Home extends Component {
             name="trees"
           />
           <H2 style="h1" color="light" noMargin centered>
-            <FormattedMessage id="misc.feature1" />
+            {/*<FormattedMessage id="misc.feature1" />*/}
+            Built with Solid
           </H2>
-          <H3 style="h2" color="light" noMargin centered>
-            <FormattedMessage id="home.extensionText" />
+          <H3 style="h2" color="medium" noMargin centered>
+            {/*<FormattedMessage id="home.extensionText"/>*/}
+            Solid is a specification that lets people store their data securely in decentralized data stores called Pods.
           </H3>
           <nav className="home__extension">
             <Link
-              href="https://chrome.google.com/webstore/detail/bookyio-extension/pmcpkkipiedakcaolhnbijibndfemckf"
+              href="https://solidproject.org"
               target="_blank"
               color="light"
               className="home__extension-browser"
@@ -220,107 +259,107 @@ class Home extends Component {
                 height="75"
                 alt=""
                 className="home__extension-icon"
-                src="../../_assets/logos/chrome.svg"
+                src="../../_assets/logos/solid_project.png"
                 loading="lazy"
               />
-              {'Chrome'}
+              {'Solid Project'}
             </Link>
-            <Link
-              href="https://addons.mozilla.org/en-US/firefox/addon/booky-io-extension/"
-              target="_blank"
-              color="light"
-              className="home__extension-browser"
-            >
-              <img
-                width="75"
-                height="75"
-                alt=""
-                className="home__extension-icon"
-                src="../../_assets/logos/firefox.svg"
-                loading="lazy"
-              />
-              {'Firefox'}
-            </Link>
-            <Link
-              href="https://addons.opera.com/de/extensions/details/bookyio-extension/"
-              target="_blank"
-              color="light"
-              className="home__extension-browser"
-            >
-              <img
-                width="75"
-                height="75"
-                alt=""
-                className="home__extension-icon"
-                src="../../_assets/logos/opera.svg"
-                loading="lazy"
-              />
-              {'Opera'}
-            </Link>
-            <Link
-              href="https://microsoftedge.microsoft.com/addons/detail/bookyio-erweiterung/gnhlkmoepijbfnmblekhhdgkgdahdjek"
-              target="_blank"
-              color="light"
-              className="home__extension-browser"
-            >
-              <img
-                width="75"
-                height="75"
-                alt=""
-                className="home__extension-icon"
-                src="../../_assets/logos/edge.svg"
-                loading="lazy"
-              />
-              {'Edge'}
-            </Link>
+            {/*  <Link*/}
+            {/*    href="https://addons.mozilla.org/en-US/firefox/addon/booky-io-extension/"*/}
+            {/*    target="_blank"*/}
+            {/*    color="light"*/}
+            {/*    className="home__extension-browser"*/}
+            {/*  >*/}
+            {/*    <img*/}
+            {/*      width="75"*/}
+            {/*      height="75"*/}
+            {/*      alt=""*/}
+            {/*      className="home__extension-icon"*/}
+            {/*      src="../../_assets/logos/firefox.svg"*/}
+            {/*      loading="lazy"*/}
+            {/*    />*/}
+            {/*    {'Firefox'}*/}
+            {/*  </Link>*/}
+            {/*  <Link*/}
+            {/*    href="https://addons.opera.com/de/extensions/details/bookyio-extension/"*/}
+            {/*    target="_blank"*/}
+            {/*    color="light"*/}
+            {/*    className="home__extension-browser"*/}
+            {/*  >*/}
+            {/*    <img*/}
+            {/*      width="75"*/}
+            {/*      height="75"*/}
+            {/*      alt=""*/}
+            {/*      className="home__extension-icon"*/}
+            {/*      src="../../_assets/logos/opera.svg"*/}
+            {/*      loading="lazy"*/}
+            {/*    />*/}
+            {/*    {'Opera'}*/}
+            {/*  </Link>*/}
+            {/*  <Link*/}
+            {/*    href="https://microsoftedge.microsoft.com/addons/detail/bookyio-erweiterung/gnhlkmoepijbfnmblekhhdgkgdahdjek"*/}
+            {/*    target="_blank"*/}
+            {/*    color="light"*/}
+            {/*    className="home__extension-browser"*/}
+            {/*  >*/}
+            {/*    <img*/}
+            {/*      width="75"*/}
+            {/*      height="75"*/}
+            {/*      alt=""*/}
+            {/*      className="home__extension-icon"*/}
+            {/*      src="../../_assets/logos/edge.svg"*/}
+            {/*      loading="lazy"*/}
+            {/*    />*/}
+            {/*    {'Edge'}*/}
+            {/*  </Link>*/}
           </nav>
         </Section>
-        <Section>
-          <Feature
-            headline={intl.formatMessage({ id: 'home.performantHeadline' })}
-            text={intl.formatMessage({ id: 'home.performantText' })}
-            illustration="speed"
-          />
-        </Section>
-        <Section>
-          <Feature
-            headline={intl.formatMessage({ id: 'home.mobileHeadline' })}
-            text={intl.formatMessage({ id: 'home.mobileText' })}
-            illustration="mobile"
-            direction="right"
-          />
-        </Section>
-        <Section color="light" contentClassName="home__features">
-          <H2 style="h1" noMargin centered className="home__features-headline">
-            <FormattedMessage id="misc.features" />
-          </H2>
-          <Features />
-        </Section>
+        {/*<Section>*/}
+        {/*  <Feature*/}
+        {/*    headline={intl.formatMessage({id: 'home.performantHeadline'})}*/}
+        {/*    text={intl.formatMessage({id: 'home.performantText'})}*/}
+        {/*    illustration="speed"*/}
+        {/*  />*/}
+        {/*</Section>*/}
+        {/*<Section>*/}
+        {/*  <Feature*/}
+        {/*    headline={intl.formatMessage({id: 'home.mobileHeadline'})}*/}
+        {/*    text={intl.formatMessage({id: 'home.mobileText'})}*/}
+        {/*    illustration="mobile"*/}
+        {/*    direction="right"*/}
+        {/*  />*/}
+        {/*</Section>*/}
+        {/*<Section color="light" contentClassName="home__features">*/}
+        {/*  <H2 style="h1" noMargin centered className="home__features-headline">*/}
+        {/*    <FormattedMessage id="misc.features"/>*/}
+        {/*  </H2>*/}
+        {/*  <Features/>*/}
+        {/*</Section>*/}
         <Section className="home__not-a-member">
-          <Illustration className="home__heart" name="heart" />
+          <Illustration className="home__heart" name="heart"/>
           <H2 style="h1" centered noMargin>
-            <FormattedMessage id="home.notAMember" />
+            <FormattedMessage id="home.notAMember"/>
           </H2>
           <H3 style="h2" noMargin centered>
-            <FormattedMessage id="home.promoText" />
+            <FormattedMessage id="home.promoText"/>
           </H3>
           <ButtonLargeBlue
             icon="join"
-            to="/join"
+            to="/login"
             contentBefore
             className="home__join"
           >
             <FormattedMessage
-              id="header.register"
-              values={{ b: (msg) => <b>{msg}</b> }}
+              id="header.login"
+              values={{b: (msg) => <b>{msg}</b>}}
             />
           </ButtonLargeBlue>
-          <ButtonLargeLight icon="about" to="/about">
-            <FormattedMessage
-              id="header.learnMore"
-              values={{ b: (msg) => <b>{msg}</b> }}
-            />
-          </ButtonLargeLight>
+          {/*<ButtonLargeLight icon="about" to="/about">*/}
+          {/*  <FormattedMessage*/}
+          {/*    id="header.learnMore"*/}
+          {/*    values={{ b: (msg) => <b>{msg}</b> }}*/}
+          {/*  />*/}
+          {/*</ButtonLargeLight>*/}
         </Section>
       </Page>
     );

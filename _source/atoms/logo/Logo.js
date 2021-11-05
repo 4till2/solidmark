@@ -10,7 +10,8 @@ const colors = {
 export default class Logo extends Component {
   render() {
     const { className, alt, height, width, color } = this.props;
-    const src = colors[color];
+    // const src = colors[color];
+    const src = '../../_assets/Solidmark.svg';
 
     return (
       <img

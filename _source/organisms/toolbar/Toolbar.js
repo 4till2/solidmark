@@ -45,7 +45,10 @@ class Toolbar extends PureComponent {
   };
 
   onAddCategoryClick = () => {
-    this.props.openModal('AddCategory');
+    // this.props.openModal('AddCategory');
+    this.props.openModal('AddBookmark', {
+      categoryId: 1
+    });
   };
 
   onAddDashboardClick = () => {
@@ -115,24 +118,35 @@ class Toolbar extends PureComponent {
                 </ButtonSmallPrimary>
               </>
             ) : (
+              // <ButtonSmallPrimary
+              //   icon="add-category"
+              //   className="toolbar__add-category"
+              //   onClick={this.onAddCategoryClick}
+              //   useSkeleton={categoriesPending}
+              // >
+              //   <FormattedMessage
+              //     id="category.add"
+              //     values={{ b: (msg) => <b>{msg}</b> }}
+              //   />
+              // </ButtonSmallPrimary>
               <ButtonSmallPrimary
-                icon="add-category"
-                className="toolbar__add-category"
+                icon="add-link"
+                className="category__button"
                 onClick={this.onAddCategoryClick}
-                useSkeleton={categoriesPending}
               >
                 <FormattedMessage
-                  id="category.add"
+                  id="bookmark.add"
                   values={{ b: (msg) => <b>{msg}</b> }}
                 />
               </ButtonSmallPrimary>
             )}
+
           </>
         )}
-        <SearchField
-          className="booky--hide-mobile-tablet"
-          id="search-desktop"
-        />
+        {/*<SearchField*/}
+        {/*  className="booky--hide-mobile-tablet"*/}
+        {/*  id="search-desktop"*/}
+        {/*/>*/}
       </section>
     );
   }
