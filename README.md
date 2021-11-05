@@ -15,11 +15,13 @@ Data stored in Solid Pods can power ecosystems of interoperable applications whe
 [Learn more about Solid](https://solidprotocol.org)
 ## What is booky.io?
 booky.io is an online bookmark manager with a focus on simplicity, customizable, privacy, and speed.
-The original React / Redux code can be found [here](https://github.com/nthiebes/booky.io).
+The original React / Redux code can be found [here](https://github.com/nthiebes/booky.io). You can also see all differences in code within the commit history.
 
 [Learn more about booky.io](https://booky.io/about)
 
 ## Implementation
+All functional code was done in [the first commit](https://github.com/yserkez/solidmark/commit/963842f7c12100fef2e5affebb6607b170a2b5c7). Take a look there for a side by side of the code with and without solid.
+
 The only place within the previously existing codebase where a reference to Solid can be found is within the [fetcher function](_source/_utils/fetcher/index.js) where we
 intercept the regular `fetch` method for our own. To demonstrate that Solid can be used alongside a standard api I have actually just configured Solid alongside the normal api usage, activating it when our constant `SOLID` is set to true. [Code permalink](https://github.com/yserkez/solidmark/blob/1d44d1efcfb6da0742661d5a56f2f16486b39f98/_source/_utils/fetcher/index.js#L70)
 ```javascript
