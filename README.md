@@ -8,14 +8,14 @@ is handled with the front end code. There is no fear of data corruption since th
 as a rule. See [Implementation](#implementation) below for an outline of the Solid specific implementation.
 
 ## What is Solid?
-Solid is a specification that lets people store their data securely in decentralized data stores called Pods. Pods are like secure personal web servers for data. When data is stored in someone's Pod, they control which people and applications can access it.Solid is a specification that lets people store their data securely in decentralized data stores called Pods. Pods are like secure personal web servers for data. When data is stored in someone's Pod, they control which people and applications can access it.
+Solid is a specification that lets people store their data securely in decentralized data stores called Pods. Pods are like secure personal web servers for data. When data is stored in someone's Pod, they control which people and applications can access it.
 
 Data stored in Solid Pods can power ecosystems of interoperable applications where individuals are free to use their data seamlessly across different applications and services.
 
 [Learn more about Solid](https://solidprotocol.org)
 ## What is booky.io?
 booky.io is an online bookmark manager with a focus on simplicity, customizable, privacy, and speed.
-The original React / Redux code can be found [here](https://github.com/nthiebes/booky.io). You can also see all differences in code within the commit history.
+The original React / Redux code can be found [here](https://github.com/nthiebes/booky.io). To see all code implementation done by me see the commit history.
 
 [Learn more about booky.io](https://booky.io/about)
 
