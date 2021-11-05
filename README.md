@@ -98,7 +98,7 @@ In total, I spent about 20 hours on this project. The estimated time breakdown i
 
 This was my first intro to the Solid Protocol, and I am only just
 beginning to get a grasp on the new mental models. As an everyday guy I would love to see more applications built on Solid. As a developer I'd love for better tooling and documentation, to assist with "framing" the new mental models. That being said the 
-tooling and documentation that is existent is not too bad and clearly the result of a hardworking and dedicated community. Solid is growing up fast and I hope to play a role it's future :)
+tooling and documentation that is existent is not too bad and clearly the result of a hardworking and dedicated community. Solid is growing up fast and I hope to play a role in it's future :)
 
 
 ps. Take a look at [logBook](logBook) for notes taken during the development of this project.
